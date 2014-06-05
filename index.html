@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="jqm/jquery.mobile-min.css">
+  <!--link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less"-->
+  <title>Your New Application</title>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+  <style type="text/css">
+    /* Prevent copy paste for all elements except text fields */
+    *  { -webkit-user-select:none; -webkit-tap-highlight-color:rgba(255, 255, 255, 0); }
+    input, textarea  { -webkit-user-select:text; }
+  </style>
+  <script src="cordova.js"></script>
+  <script type="application/javascript" src="js/jquery.min.js"></script>
+  <script type="application/javascript" src="jqm/jquery.mobile-min.js"></script>
+  <script type="application/javascript" src="popup/popup.min.js"></script>
+  <script type="application/javascript" src="js/index.js"></script>
+  <script type="text/javascript">
+    var onDeviceReady=function(){
+      //hide splash screen
+      initialize.setupControls();
+    };
+    document.addEventListener("deviceready", onDeviceReady, false);
+  </script>
+</head>
+
+<body>
+
+  <!-- content goes here-->
+    <div class="upage" data-role="page" id="homepage">
+      <div class="upage-outer">
+        <div data-role="header" data-uib="jquery_mobile/header" data-theme="a">
+          <h1>Saldo</h1>
+        </div>
+        <div class="upage-content">
+            <a data-uib="jquery_mobile/button" data-role="button" id="saldocheck">haal saldo</a>
+            <div data-uib="media/text" id="saldostatus">
+              <p></p>
+            </div>
+      </div>
+      <!-- /upage-content -->
+
+      <div data-role="footer" data-position="fixed" data-uib="jquery_mobile/footer" data-theme="a">
+        <h1></h1>
+      </div>
+    </div>
+    <!-- /upage-outer -->
+
+  </div>
+  <!-- /upage -->
+
+  <div class="lpage" data-role="page" id="loginpage">
+  </div>
+
+  <!-- /uwrap -->
+</body>
+
+</html>
